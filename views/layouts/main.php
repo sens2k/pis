@@ -41,14 +41,20 @@ AppAsset::register($this);
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
             [
-                'label' => 'Лабораторные',
+                'label' => 'Лабораторная 1',
                 'items' => [
                     ['label' => 'Информация', 'url' => ['/site/index']],
-                    ['label' => 'Лабораторная 1', 'url' => ['/site/laba1']],
-                    ['label' => 'Лабораторная 2', 'url' => ['/site/laba2']],
-                    ['label' => 'Лабораторная 3', 'url' => ['/site/laba3']],
+                    ['label' => 'Введенные данные', 'url' => ['/site/laba1']],
                 ]
             ],
+            [
+                'label' => 'Лабораторная 2',
+                'items' => [
+                    ['label' => 'Страны', 'url' => ['/country/index']],
+                    ['label' => 'Авторы', 'url' => ['/author/index']],
+                ]
+            ],
+
 
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]

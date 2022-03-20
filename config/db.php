@@ -2,7 +2,7 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'sqlite:'.__DIR__ . '/sqlite.db',
+    'dsn' => 'sqlite:'.__DIR__ . '/../identifier.sqlite',
     'charset' => 'utf8',
 
     // Schema cache options (for production environment)
