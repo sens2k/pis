@@ -149,13 +149,4 @@ class SiteController extends Controller
         return $this->render('laba1', ['model' => $model, 'valid' => $valid]);
     }
 
-    public function actionLaba2()
-    {
-        return $this->render('laba2');
-    }
-
-    public function actionLaba3()
-    {
-        return $this->render('laba3');
-    }
 }

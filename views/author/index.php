@@ -16,18 +16,24 @@ $this->params['breadcrumbs'][] = $this->title;
                     <th scope="col">id</th>
                     <th scope="col">Имя</th>
                     <th scope="col">Фамилия</th>
+                    <th scope="col"></th>
                 </tr>
                 </thead>
                 <tbody>
                 <?php foreach ($authors as $author): ?>
                 <tr>
-                    <th><?= Html::encode("{$author->id}") ?></th>
-                    <td><?= Html::encode("{$author->Name}") ?></td>
-                    <td><?= Html::encode("{$author->Surname}") ?></td>
+                    <th><?= Html::encode($author->id) ?></th>
+                    <td><?= Html::encode($author->Name) ?></td>
+                    <td><?= Html::encode($author->Surname) ?></td>
+                    <th><?= Html::a('Удалить автора', ['delete', 'AuthorDeleteForm[id]' => $author->id], ['class' => 'btn btn-outline-dark btn-sm ']) ?></th>
                 </tr>
                 <?php endforeach; ?>
                 </tbody>
             </table>
-
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-7">
+            <th><?= Html::a('Добавить атора', ['add'] ,['class' => 'btn btn-outline-dark btn-sm btn-block']) ?></th>
         </div>
     </div>
