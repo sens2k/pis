@@ -3,6 +3,7 @@
 namespace app\controllers;
 use yii\web\Controller;
 use app\models\Author;
+use app\models\Book;
 use app\models\AuthorAddForm;
 use app\models\AuthorDeleteForm;
 use Yii;
@@ -42,6 +43,20 @@ class AuthorController extends Controller
                 return $this->goBack(Yii::$app->request->referrer);
             }
         }
+    }
+
+
+    public function actionCount()
+    {
+        $query = Author::find();
+        $authors = $query
+            ->select(['Author.*', 'bookCount' => 'Count(Book.id)'])
+            ->joinWith('books')
+            ->groupBy('Author.id')
+            ->orderBy(['bookCount' => SORT_DESC])
+            ->all();
+
+        return $this->render('counter', ['authors' => $authors]);
     }
 
 }

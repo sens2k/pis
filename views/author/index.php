@@ -34,6 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
     <div class="row">
         <div class="col-lg-7">
-            <th><?= Html::a('Добавить атора', ['add'] ,['class' => 'btn btn-outline-dark btn-sm btn-block']) ?></th>
+            <?= Html::a('Добавить автора', ['add'] ,['class' => 'btn btn-outline-dark btn-sm btn-block']) ?>
+            <?= Html::a('Авторы и их книги', ['count'] ,['class' => 'btn btn-outline-success btn-sm btn-block']) ?>
         </div>
     </div>

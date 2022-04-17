@@ -52,6 +52,8 @@ AppAsset::register($this);
                 'items' => [
                     ['label' => 'Страны', 'url' => ['/country/index']],
                     ['label' => 'Авторы', 'url' => ['/author/index']],
+                    ['label' => 'Жанры', 'url' => ['/genre/index']],
+                    ['label' => 'Книги', 'url' => ['/book/index']]
                 ]
             ],
 
