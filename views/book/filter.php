@@ -1,12 +1,11 @@
 <?php
 use yii\helpers\Html;
-
 /* @var array $books */
 
-$this->title = 'Books';
+$this->title = 'Books filter';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<h1 >Книги</h1>
+<h1 >Книги 90х</h1>
 <div class="row">
     <div class="col-lg-7">
         <table class="table text-center">
@@ -31,11 +30,5 @@ $this->params['breadcrumbs'][] = $this->title;
             <?php endforeach; ?>
             </tbody>
         </table>
-    </div>
-</div>
-<div class="row">
-    <div class="col-lg-7">
-        <?=Html::a('Книги 90х', ['filter'], ['class' => 'btn btn-outline-success btn-sm btn-block'])?>
-        <?=Html::a('Поиск по названию', ['name'], ['class' => 'btn btn-outline-success btn-sm btn-block'])?>
     </div>
 </div>
